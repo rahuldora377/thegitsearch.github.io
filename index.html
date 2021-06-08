@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<title>Hello, world!</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col text-center mt-5">
+				<h1>The Git Search</h1>
+			</div>
+		</div>
+		<form >
+			<div class="row mt-5" style="width: 70%; margin:auto;">
+			<div class="col-md-8">
+				<input type="text" class="form-control" id="search" placeholder="Enter Github Users' Name">
+				<div class="invalid-feedback">Invalid Username</div>
+			</div>
+			<div class="col-md-4 mt-3 mt-md-0">
+				<button class="btn btn-primary btn-block" id="submit">Search</button>
+			</div>
+		</form>
+		</div>
+		<div class="row mt-5 m-3 justify-content-center d-none" id="main-row">
+			<div class="card" style="width: 20rem;">
+				<img class="card-img-top" id="user-img" src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="user Image">
+				<div class="card-body">
+					<h5 class="card-title" id="username">User Name</h5>
+					<p class="card-text" id="bio">Here goes the user bio</p>	
+				</div>
+				<div class="row justify-content-between text-center mb-3">
+					<div class="col-md-6">
+						<a href="#" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">More Details</a>
+																	<!-- modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="CallModal" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <h5 class="modal-title" id="exampleModalLabel">More Details</h5>
+								  <button type="button" class="close" data-dismiss="callModal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								  </button>
+								</div>
+								<div class="modal-body">
+								  <table class="table">
+									  <thead>
+										  <tr>
+											  <th>Name</th>
+											  <th>created at</th>
+											  <th>Last update</th>
+										  </tr>
+									  </thead>
+									  <tbody>
+										  <td id="name"></td>
+										  <td id="created-at"></td>
+										  <td id="Last-update"></td>
+									  </tbody>
+								  </table>
+								</div>
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						  </div>
+					</div>
+					<div class="col-md-6 mt-2 mt-md-0">
+						<a href="#" class="btn btn-secondary" id="profile-link" target="_blank">Goto Profile</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
